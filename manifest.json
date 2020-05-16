@@ -1,0 +1,24 @@
+{
+  "name": "Salesforce coffin dance splash screen",
+  "version": "0.1",
+  "description": "Replace salesforce custom splash screen for a nicer one",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://*.lightning.force.com/*"
+      ],
+      "all_frames": true,
+      "js": [
+        "assets/js/contentScript.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "assets/images/icon16.png",
+    "32": "assets/images/icon32.png",
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
+  }
+}
